@@ -10,7 +10,7 @@ echo "==============================================="
 
 echo -n "1. Memulai download... "
 # Kita download dengan nama file yang lebih sederhana saja
-curl -L -# -o SentinelAgent_linux_x86_64_v25_4_2_21.deb "$S1_URL"
+curl -L -# -o linux.deb "$S1_URL"
 
 if [ $? -eq 0 ]; then
     echo "   [OK] Download selesai."
@@ -21,10 +21,10 @@ fi
 
 echo "2. Menginstal paket .deb..."
 # Hapus > /dev/null supaya kalau error kelihatan kenapa
-sudo dpkg -i SentinelAgent_linux_x86_64_v25_4_2_21.deb || {
+sudo dpkg -i linux.deb || {
     echo "   [!] Ada masalah dependency, mencoba memperbaiki..."
     sudo apt-get install -f -y
-    sudo dpkg -i SentinelAgent_linux_x86_64_v25_4_2_21.deb
+    sudo dpkg -i linux.deb
 }
 
 # Cek apakah folder sentinelone benar-benar ada setelah install
@@ -40,7 +40,7 @@ echo "4. Menjalankan Agent..."
 sudo /opt/sentinelone/bin/sentinelctl control start
 
 echo "5. Membersihkan file installer..."
-rm SentinelAgent_linux_x86_64_v25_4_2_21.deb
+rm linux.deb
 
 echo "==============================================="
 echo "INSTALASI SELESAI!"

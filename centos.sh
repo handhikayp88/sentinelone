@@ -4,7 +4,7 @@
 # Pastikan URL mengarah ke versi RPM yang sesuai untuk CentOS
 S1_URL="https://github.com/handhikayp88/sentinelone/raw/refs/heads/main/linux.rpm"
 S1_TOKEN="eyJ1cmwiOiAiaHR0cHM6Ly9hcHNlMS0yMDAyLnNlbnRpbmVsb25lLm5ldCIsICJzaXRlX2tleSI6ICJlZThkNmIzZWJmN2U4OWU0NjkzMTc3NTk3YjlkYjE4MmQ0ZTYxZTU2YzVlZjA0ZThlODFhNjZiMmNjNTQyNzU5In0="
-INSTALLER_FILE="SentinelAgent_linux_x86_64_v25_4_2_21.rpm"
+INSTALLER_FILE="linux.rpm"
 
 # --- PROSES INSTALASI ---
 echo "==============================================="
